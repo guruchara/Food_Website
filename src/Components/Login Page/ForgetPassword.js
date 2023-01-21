@@ -19,9 +19,9 @@ function ForgetPassword() {
 
         } catch (err) {
             console.log(err.message);
-            if (err.message == "Request failed with status code 404") {
+            if (err.message === "Request failed with status code 404") {
                 alert("user with this email not found");
-            } else if (err.message == "Request failed with status code 500") {
+            } else if (err.message === "Request failed with status code 500") {
                 alert("Internal server error");
             }
         }

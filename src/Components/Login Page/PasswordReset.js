@@ -22,15 +22,15 @@ function PasswordReset() {
                 password: password,
                 confirmPassword: passwordCnf
             })
-            if (res.status == 201) {
+            if (res.status === 201) {
                 alert("password changed successfully");
                 setOtpPassEmail(null);
                 setResetEmail(null);
                 history.push("/login");
-            } else if (res.status == 200) {
-                if (res.message == "Otp Expired") {
+            } else if (res.status === 200) {
+                if (res.message === "Otp Expired") {
                     alert("Otp expried kindly regenerate ")
-                } else if (res.message == "wrong otp") {
+                } else if (res.message === "wrong otp") {
                     alert("wrong otp");
                 }
                 setOtpPassEmail(null);
@@ -38,7 +38,7 @@ function PasswordReset() {
             }
         } catch (err) {
             console.log(err.message);
-            if (err.message == "Request failed with status code 500") {
+            if (err.message === "Request failed with status code 500") {
                 alert("Internal server error");
             }
             setOtpPassEmail(null);

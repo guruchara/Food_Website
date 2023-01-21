@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router';
 export const AuthContext = React.createContext();
@@ -29,7 +29,7 @@ function AuthProvider({ children }) {
             setLoading(false);
         } catch (err) {
             console.log("err", err.message);
-            if (err.message == "Request failed with status code 400") {
+            if (err.message === "Request failed with status code 400") {
                 alert("improper user data entry")
             }
             setLoading(false);
@@ -54,13 +54,13 @@ function AuthProvider({ children }) {
         catch (err) {
             flag = false;
             console.log(err.message);
-            if (err.message == "Request failed with status code 404") {
+            if (err.message === "Request failed with status code 404") {
                 alert("Password or email may be wrong");
                 flag = false;
-            } else if (err.message == "Request failed with status code 400") {
+            } else if (err.message === "Request failed with status code 400") {
                 alert("user not found kindly login");
                 flag = false;
-            } else if (err.message == "Request failed with status code 500") {
+            } else if (err.message === "Request failed with status code 500") {
                 alert("Internal server error")
                 flag = false;
             }

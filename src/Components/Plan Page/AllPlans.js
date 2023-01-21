@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 
 function AllPlans() {
     const [arr, arrset] = useState([]);
-    useEffect(async () => {
-        try {
-            const res = await axios.get("https://food-app-backend101.herokuapp.com/api/v1/plan");
-            // console.log(res.data.Allplans);
-            arrset(res.data.Allplans);
-        } catch (err) {
-            console.log(err);
-        }
-    }, [])
+    // useEffect(async () => {
+    //     try {
+    //         const res = await axios.get("https://food-app-backend101.herokuapp.com/api/v1/plan");
+    //         // console.log(res.data.Allplans);
+    //         arrset(res.data.Allplans);
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }, [])
     return (
         <div className='allplansCard'>
             <div className='h1Box'>

@@ -1,0 +1,261 @@
+.mainContainer {
+    width: 100%;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef0ef;
+    flex-direction: column;
+}
+
+.form-container {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6e6e6e;
+    background-color: #eef0ef;
+    border-radius: 10px;
+    padding: 50px 10px;
+    box-shadow: 0 10px 22px 10px rgb(27 38 49 / 10%);
+}
+
+.loginBox {
+    height: 80%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+
+}
+
+.entryBox {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.entryText {
+    width: 100%;
+    font-size: 17px;
+}
+
+.entryBox .input {
+    width: 100%;
+    height: 65%;
+    border: none;
+    margin: 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.loginBtn {
+    height: 45px;
+    width: 30%;
+    border-radius: 2rem;
+    margin-right: 25px;
+    background-color: #F7115F;
+    border: 3px solid #F7115F;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.loginBtn:hover {
+    transform: scale(1.2);
+}
+
+.otherOption {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.otherbtns {
+    font-size: 17px;
+    border: none;
+    text-decoration: none;
+    color: #6e6e6e;
+    transition: 0.3s;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.productsContainer {
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.productsContainer img {
+    height: 180px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.417vw;
+    margin-bottom: 0.833vw;
+    /* margin-left: 2.729vw !important; */
+    width: 86%;
+    object-fit: contain;
+}
+
+.productName {
+    font-family: 'CircularStd-Bold';
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    font-family: 'CircularStd-Bold', sans-serif;
+    font-stretch: normal;
+    font-weight: 100;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.pricePrdctNameContainer {
+    display: flex;
+    margin-top: 4px;
+}
+
+.pricePrdctNameContainer p {
+    margin-left: 8px;
+}
+
+.addBtn {
+    font-family: 'CircularStd-Bold';
+    font-size: 20px;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-family: CircularStd-Bold, sans-serif;
+    font-stretch: normal;
+    font-weight: 100;
+    justify-content: center;
+    padding-top: 2v;
+    background-color: #151718;
+    border-radius: 0.208vw;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1vw;
+    text-align: center;
+    width: 64%;
+    border: none;
+    padding: 6px 5px;
+}
+
+.quantityChangeContainer{
+    font-size: 24px;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-family: CircularStd-Bold, sans-serif;
+    font-stretch: normal;
+    font-weight: 100;
+    justify-content: center;
+    padding-top: 2v;
+    background-color:#e43530;
+    border-radius: 0.208vw;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1vw;
+    text-align: center;
+    width: 64%;
+    border: none;
+    padding: 4px 5px;
+}
+
+.quantityChangeContainer p{
+    font-size: 20px;
+}
+
+
+.quantityChangeContainerButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+}
+
+.h1Box h1 {
+    width: 100%;
+    margin-bottom: 1vw;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: start;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-top: 3vh;
+    background: #fff;
+    padding-top: 10px;
+    border-radius: 8px;
+    padding-bottom: 12px;
+}
+
+.sign {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sign p {
+    color: red;
+
+}
+
+
+
+
+/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+{this.state.counters.map((counter) => (
+  <div
+    className="space-y-2 bg-gray-800 shadow-sm flex-col rounded-md flex items-center justify-center h-32"
+    key={counter.id}
+  >
+    <div className="text-3xl text-gray-100">{counter.value}</div>
+    <div className="flex gap-3">
+      <button
+        className="px-6 py-1 rounded bg-gray-700 text-gray-100 hover:shadow-lg transition duration-200 ease-in"
+        onClick={() => this.handleIncrement(counter)}
+      >
+        +
+      </button>
+
+      <button
+        disabled={counter.value == 0}
+        className={`${
+          counter.value == 0
+            ? "disabled:opacity-50 px-6 py-1 rounded bg-gray-700 text-gray-100 hover:shadow-lg transition duration-200 ease-in"
+            : "px-6 py-1 rounded bg-gray-700 text-gray-100 hover:shadow-lg transition duration-200 ease-in"
+        } `}
+        onClick={() => this.handleDecrement(counter)}
+      >
+        -
+      </button>
+
+      <button
+        className="px-6 py-1 rounded bg-gray-700 text-gray-100 hover:shadow-lg transition duration-200 ease-in"
+        onClick={() => this.handleDelete(counter)}
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+))}
+</div> */
